@@ -53,6 +53,14 @@
             possible_line_height = { lineHeight: $this.css('height'), whiteSpace: 'nowrap' };
           }
 
+          var wrapper = $('<div />')
+            .css({
+              display: 'inline-block',
+              position: 'relative'
+            });
+
+          $this.wrap(wrapper);
+
           var ol = $('<label />')
             .text($this.attr('placeholder'))
             .addClass(config.cls)
@@ -103,4 +111,3 @@ jQuery(document).add(window).bind('ready load', function() {
     jQuery.placeholder.shim();
   }
 });
-
